@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fr.cleger.noxonremote.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_skip_next_black_48dp"
+        android:layout_alignTop="@+id/b_previous"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_next" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_play_arrow_black_48dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/b_play"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_alignTop="@+id/b_stop"
+        android:layout_toRightOf="@+id/b_stop"
+        android:layout_toEndOf="@+id/b_stop" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_skip_previous_black_48dp"
+        android:id="@+id/b_previous"
+        android:layout_alignTop="@+id/b_play"
+        android:layout_toLeftOf="@+id/b_next"
+        android:layout_toStartOf="@+id/b_next"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_volume_up_black_48dp"
+        android:layout_alignBottom="@+id/b_vol_down"
+        android:layout_alignLeft="@+id/b_play"
+        android:layout_alignStart="@+id/b_play"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_vol_up" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_shuffle_black_48dp"
+        android:layout_alignBottom="@+id/b_vol_up"
+        android:layout_alignLeft="@+id/b_previous"
+        android:layout_alignStart="@+id/b_previous"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_shuffle" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_repeat_black_48dp"
+        android:layout_alignBottom="@+id/b_shuffle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_repeat" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_arrow_downward_black_48dp"
+        android:id="@+id/b_down"
+        android:layout_below="@+id/b_left"
+        android:layout_toRightOf="@+id/b_left"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_toEndOf="@+id/b_left" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite_black_48dp"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_fav"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_settings_applications_black_48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_settings" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radio_connected"
+        android:layout_toLeftOf="@+id/b_shuffle"
+        android:layout_toStartOf="@+id/b_shuffle" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_volume_down_black_48dp"
+        android:id="@+id/b_vol_down"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_below="@+id/b_stop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_stop_black_48dp"
+        android:id="@+id/b_stop"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_below="@+id/b_fav"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_arrow_forward_black_48dp"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_right"
+        android:layout_below="@+id/b_up"
+        android:layout_toRightOf="@+id/b_down"
+        android:layout_toEndOf="@+id/b_down" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_arrow_back_black_48dp"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_left"
+        android:layout_below="@+id/b_up"
+        android:layout_toLeftOf="@+id/b_up"
+        android:layout_toStartOf="@+id/b_up" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_home_black_48dp"
+        android:id="@+id/b_home"
+        android:elevation="1dp"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/b_play"
+        android:layout_alignStart="@+id/b_play" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_arrow_upward_black_48dp"
+        android:onClick="OnClickNoxonHandler"
+        android:id="@+id/b_up"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_info_black_48dp"
+        android:onClick="OnClickNoxonHandler"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/b_previous"
+        android:layout_alignStart="@+id/b_previous"
+        android:id="@+id/b_info" />
+
+</RelativeLayout>
